@@ -1,0 +1,44 @@
+Task 2;
+date= 9-MARCH-2023
+
+query task 1 
+Literal character:
+ select ename || '=>' || job AS "employes" from emp;
+Literal character string:
+select ename ||': monthly salary = '||sal as " MONTHLY salary" from emp;
+Alternative quote(q)operator:
+select dname || q'[department's location = ]' || loc "Department" from  dept;
+             select deptno from emp;
+             select distinct deptno from emp;
+select ename,job,sal*12 " yearly sal" from emp;
+
+select ename||' , ' || job "Employee and title " from emp;
+
+select ename||' '||job||' '||sal||' '||comm,q'[employe's record]' from emp;
+
+Query 1: select ename EMP_NAME,job EMP_JOB, sal EMP_SALARY from  emp;
+QUERY 2: select ename|| ',,' ||job||',,'||sal||'   '||comm "OVERALL RECORD" from emp;
+QUERY 3: select ename|| ' is an employee whose salary is : ' || 'and belong to department Number : '|| deptno " Employee record" from emp where sal=800 and deptno=20;
+
+
+task 2 
+desc tab;
+select * from tab:
+select ename,job,sal from emp where HIREDATE='14-aug-1947';     //equal to
+select ename,job from emp where HIREDATE<'17-nov-81';           // greater then 
+select ename,job,sal from emp where HIREDATE BETWEEN '17-dec-80' and '17-nov-81';
+select ename,job,hiredate from emp where COMM IS NULL;
+select ename,job,sal from emp where sal BETWEEN 2500 and 6000 ;
+select ename,job,sal from emp where HIREDATE BETWEEN '1-jan-81' and '12-dec-81';     //start date and end date 
+select ename,mgr from emp where mgr in (7782,7902,7788);
+select ename from emp where ename LIKE 'S%';      //display name start with s 
+select ename from emp where ename LIKE '%S';      //display name end with s
+select ename from emp where ename like 'J%' OR ename like '%S';       //name start with J and end with s
+select ename from emp where ename like '%J%' OR ename like '%S%';     // %S% where S is present will be come 
+select ename from emp where ename like '_A%';  // _ for second character will be A in first
+select ename from emp where ename like '%E_';  //%E_ for second last character will be E 
+
+
+Query 1:select ename from emp where ename like '_A%'; 
+Query 2:select ename from emp where ename like '%E_'; 
+
