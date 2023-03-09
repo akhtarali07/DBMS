@@ -43,4 +43,4 @@ Query 2:select ename from emp where ename like '%E_';
 Query 3:select job from emp where job LIKE '_A%A_';
 Query 4:select distinct job from emp where job LIKE '_A%A_';
 Query 5:select ename ,hiredate from emp where hiredate like '_%81';
-
+Query 6: select ename ,hiredate from emp where hiredate like '_%FEB%_';
