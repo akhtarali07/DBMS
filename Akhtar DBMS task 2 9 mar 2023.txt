@@ -38,7 +38,9 @@ select ename from emp where ename like '%J%' OR ename like '%S%';     // %S% whe
 select ename from emp where ename like '_A%';  // _ for second character will be A in first
 select ename from emp where ename like '%E_';  //%E_ for second last character will be E 
 
-
 Query 1:select ename from emp where ename like '_A%'; 
 Query 2:select ename from emp where ename like '%E_'; 
+Query 3:select job from emp where job LIKE '_A%A_';
+Query 4:select distinct job from emp where job LIKE '_A%A_';
+Query 5:select ename ,hiredate from emp where hiredate like '_%81';
 
